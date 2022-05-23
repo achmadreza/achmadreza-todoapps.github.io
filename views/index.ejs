@@ -1,0 +1,39 @@
+
+<%- include ("./partials/header")%>
+
+
+
+<center>
+
+
+<div class="container mt-5">
+    
+    <h1>Todo App</h1>
+
+    <hr>
+
+    <form action="/add/todo" method="POST" class="d-flex">
+        <input type ="text" name="name" class="form-control border border-info"  placeholder="Your Programming Languange">
+        <input type="submit" value="Add Todo" class="btn btn-md btn-primary">
+    
+    </form>
+
+    <ul class="list-group my-5">
+        <% data.forEach(todos=> { %>
+        <li class="list-group-item list-group-item-secondary"><%= todos.dataValues.name %>
+            <a href="/edit/ <%= todos.id %> " button class="btn btn-success">Edit</button></a>
+            <a href="/delete/<%= todos.id %>" button class="btn btn-danger">Delete</button></a></a>
+        
+
+
+        </li>
+                
+        
+        <% }) %>
+    </ul>
+      
+    
+</div>
+</center>
+<%- include ("./partials/footer")%>
+
