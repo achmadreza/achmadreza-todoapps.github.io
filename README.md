@@ -17,11 +17,11 @@ npm install
 
 In the project directory, you can run:
 
-npx sequelize db:create
+sequelize db:create
 
 run db:migrate
 
-npx sequelize db:migrate
+sequelize db:migrate
 
 run npm start
 
